@@ -22,3 +22,20 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+vcs.xml
+
+
+# 忽略前端代码相关文件和文件夹
+frontend/
+node_modules/
+/build/
+.DS_Store
+
+# 忽略小程序相关文件和文件夹
+miniProgram/dist/
+miniProgram/node_modules/
+
+# 忽略特定文件
+*.log
+*.tmp
+
