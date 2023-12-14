@@ -27,8 +27,8 @@ vcs.xml
 
 # 忽略前端代码相关文件和文件夹
 frontend/
-node_modules/
-/build/
+*/node_modules/
+*/build/
 .DS_Store
 
 # 忽略小程序相关文件和文件夹
