@@ -1,0 +1,35 @@
+package com.hospital.model;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.io.Serializable;
+
+/**
+ * <p>
+ * HospitalSet
+ * </p>
+ *
+ * @author panyx
+ * @since 2023-12-15 16:18:14
+ */
+@Data
+@ApiModel(description = "HospitalSet")
+@TableName("hospital_set")
+public class HospitalSet extends BaseEntity {
+	
+	private static final long serialVersionUID = 1L;
+
+	@ApiModelProperty(value = "医院编号")
+	private String hoscode;
+
+	@ApiModelProperty(value = "签名秘钥")
+	private String signKey;
+
+	@ApiModelProperty(value = "api基础路径")
+	private String apiUrl;
+
+}
+
