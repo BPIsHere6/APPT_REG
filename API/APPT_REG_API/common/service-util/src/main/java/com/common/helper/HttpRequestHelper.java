@@ -38,9 +38,6 @@ public class HttpRequestHelper {
 
     /**
      * 请求数据获取签名
-     * @param paramMap
-     * @param signKey
-     * @return
      */
     public static String getSign(Map<String, Object> paramMap, String signKey) {
         if(paramMap.containsKey("sign")) {
@@ -60,9 +57,6 @@ public class HttpRequestHelper {
 
     /**
      * 签名校验
-     * @param paramMap
-     * @param signKey
-     * @return
      */
     public static boolean isSignEquals(Map<String, Object> paramMap, String signKey) {
         String sign = (String)paramMap.get("sign");
@@ -75,7 +69,6 @@ public class HttpRequestHelper {
 
     /**
      * 获取时间戳
-     * @return
      */
     public static long getTimestamp() {
         return new Date().getTime();
@@ -83,9 +76,6 @@ public class HttpRequestHelper {
 
     /**
      * 封装同步请求
-     * @param paramMap
-     * @param url
-     * @return
      */
     public static JSONObject sendRequest(Map<String, Object> paramMap, String url){
         String result = "";

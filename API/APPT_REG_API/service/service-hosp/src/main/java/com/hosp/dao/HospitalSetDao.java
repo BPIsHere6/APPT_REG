@@ -10,4 +10,5 @@ import com.model.hosp.HospitalSet;
  * @since 2023-12-15 9:05:28
  */
 public interface HospitalSetDao extends BaseMapper<HospitalSet> {
+
 }

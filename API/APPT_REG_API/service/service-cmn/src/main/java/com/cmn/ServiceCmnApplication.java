@@ -3,6 +3,7 @@ package com.cmn;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * description
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan(basePackages = {"com.cmn.dao"})
+@EnableDiscoveryClient
 public class ServiceCmnApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServiceCmnApplication.class,args);

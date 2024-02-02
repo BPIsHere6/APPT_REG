@@ -15,6 +15,11 @@
         <module>service-user</module>
         <module>service-hosp</module>
         <module>service-cmn</module>
+        <module>service-msm</module>
+        <module>service-oss</module>
+        <module>service-order</module>
+        <module>service-task</module>
+        <module>service-statistics</module>
     </modules>
     <dependencies>
         <dependency>
@@ -68,6 +73,16 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- 服务注册 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- 服务调用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 </project>

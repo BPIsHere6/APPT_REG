@@ -8,7 +8,6 @@ import com.model.hosp.HospitalSet;
 import com.vo.hosp.HospitalSetQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import com.common.utils.MD5;
@@ -27,7 +26,6 @@ import java.util.Random;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/admin/hosp/hospitalSet")
-@CrossOrigin
 public class HospitalSetController {
 
     private final HospitalSetService hospitalSetService;
@@ -121,7 +119,7 @@ public class HospitalSetController {
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         String signKey = hospitalSet.getSignKey();
         String hoscode = hospitalSet.getHoscode();
-        // TODO 发送短信
+        //TODO 发送短信
         return Result.ok();
     }
 }

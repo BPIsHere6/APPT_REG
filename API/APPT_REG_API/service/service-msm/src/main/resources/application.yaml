@@ -1,0 +1,51 @@
+# 服务端口
+server:
+  port: 8204
+
+# 服务名
+spring:
+  application:
+    name: service-msm
+
+  # 环境设置：dev、test、prod
+  profiles:
+    active: dev
+
+  # 返回json的全局时间格式
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss" # 日期时间格式
+    time-zone: GMT+8                # 时区设置
+
+  # Redis服务器配置
+  redis:
+    host: localhost            # Redis服务器地址
+    port: 6379                     # Redis服务器端口
+    database: 0                   # 使用的Redis数据库索引
+    timeout: 1800000               # 连接超时时间（毫秒）
+    lettuce:                      # Lettuce连接池配置
+      pool:
+        max-active: 20             # 最大活动连接数
+        max-wait: -1               # 等待连接的最大时间（负数表示无限制）
+        max-idle: 5                # 最大空闲连接数
+        min-idle: 0                # 最小空闲连接数
+
+  # nacos服务地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+  rabbitmq:
+    host: 192.168.10.100
+    port: 5672
+    username: panyx
+    password: panyx
+
+# 容联云短信服务
+rly:
+  sms:
+    account_id: 2c94811c8b1e335b018c90a8e9065633
+    account_token: b2e7e443debe4121b04b2f135fa83856
+    app_id: 2c94811c8b1e335b018c90a8ea78563a
+    server_ip: app.cloopen.com
+    server_port: 8883

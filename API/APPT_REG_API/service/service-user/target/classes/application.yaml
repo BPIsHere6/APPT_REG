@@ -1,0 +1,62 @@
+# 端口
+server:
+  port: 8160
+  # 服务名
+spring:
+  application:
+    name: service-user
+
+  # 环境设置：dev、test、prod
+  profiles:
+    active: dev
+
+  # mysql数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/appt_reg?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: LZYXXF0928@pyx
+
+
+  # 返回json的全局时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  # nacos服务地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+  # Redis服务器配置
+  redis:
+    host: localhost            # Redis服务器地址
+    port: 6379                     # Redis服务器端口
+    database: 0                   # 使用的Redis数据库索引
+    timeout: 1800000               # 连接超时时间（毫秒）
+    lettuce: # Lettuce连接池配置
+      pool:
+        max-active: 20             # 最大活动连接数
+        max-wait: -1               # 等待连接的最大时间（负数表示无限制）
+        max-idle: 5                # 最大空闲连接数
+        min-idle: 0                # 最小空闲连接数
+
+# 配置mapper xml文件的路径
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+
+wx:
+  open:
+    # 小程序微信公众平台appId
+    app_id: wxed9954c01bb89b47 # wxcc651fcbab275e33
+    # 小程序微信公众平台api秘钥
+    app_secret: a7482517235173ddb4083788de60b90e # 5f353399a2eae7ff6ceda383e924c5f6
+    # 回调地址
+    redirect_url: http://localhost:8160/api/ucenter/wx/callback
+
+# 前端地址
+apptRegSite:
+  baseUrl: http://localhost:3000
+

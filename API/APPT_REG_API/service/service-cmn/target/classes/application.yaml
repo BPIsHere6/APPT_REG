@@ -34,3 +34,9 @@ spring:
         max-wait: -1 #负数表示没有限制
         max-idle: 5
         min-idle: 0
+
+  # nacos服务地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

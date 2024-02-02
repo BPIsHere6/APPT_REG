@@ -9,9 +9,9 @@ import com.cmn.service.DictService;
 import com.model.cmn.Dict;
 import com.sun.deploy.net.URLEncoder;
 import com.vo.cmn.DictEeVo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -29,7 +29,7 @@ import java.util.List;
 @Service
 public class DictServiceImpl extends ServiceImpl<DictDao, Dict> implements DictService {
 
-    @Cacheable(value = "dict", keyGenerator = "keyGenerator")
+//    @Cacheable(value = "dict", keyGenerator = "keyGenerator")
     @Override
     public List<Dict> findChildData(Long id) {
        List<Dict> dictList = baseMapper.selectList(new LambdaQueryWrapper<Dict>()
@@ -78,6 +78,28 @@ public class DictServiceImpl extends ServiceImpl<DictDao, Dict> implements DictS
             e.printStackTrace();
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public String getDictName(String dictCode, String value) {
+        // 如果dictCode为null,直接根据value查询
+        LambdaQueryWrapper<Dict> wrapper = new LambdaQueryWrapper<Dict>().eq(Dict::getValue, value);
+        if (StringUtils.isNotBlank(dictCode)) {
+            Dict dict = baseMapper.selectOne(new LambdaQueryWrapper<Dict>().eq(Dict::getDictCode, dictCode));
+            wrapper.eq(Dict::getParentId, dict.getId());
+        }
+
+        Dict finalDict = baseMapper.selectOne(wrapper);
+        return finalDict.getName();
+    }
+
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        // 根据dictCode获取对应的id
+        Dict dict = baseMapper.selectOne(new LambdaQueryWrapper<Dict>()
+                .eq(Dict::getDictCode, dictCode));
+        // 根据id获取子节点
+        return this.findChildData(dict.getId());
     }
 
     // 判断id下是否有子节点

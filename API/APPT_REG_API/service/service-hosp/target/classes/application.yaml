@@ -24,10 +24,10 @@ spring:
     time-zone: GMT+8
 
   # nacos服务地址
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 127.0.0.1:8848
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
     # 开启sentinel
 #    sentinel:
@@ -42,11 +42,11 @@ spring:
       database: appt_reg_hosp
 
   # rabbitmq地址
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: 192.168.10.100
+    port: 5672
+    username: panyx
+    password: panyx
 
 # 配置mapper xml文件的路径
 mybatis-plus:

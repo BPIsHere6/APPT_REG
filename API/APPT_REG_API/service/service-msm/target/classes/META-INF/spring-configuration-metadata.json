@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "name": "rly.sms",
+      "type": "com.msm.utils.MsmProperties",
+      "sourceType": "com.msm.utils.MsmProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rly.sms.a-c-c-o-u-n-t-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.a-c-c-o-u-n-t-t-o-k-e-n",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.a-p-p-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.account-id",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.account-token",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.s-e-r-v-e-r-i-p",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.s-e-r-v-e-r-p-o-r-t",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.server-ip",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    },
+    {
+      "name": "rly.sms.server-port",
+      "type": "java.lang.String",
+      "sourceType": "com.msm.utils.MsmProperties"
+    }
+  ],
+  "hints": []
+}

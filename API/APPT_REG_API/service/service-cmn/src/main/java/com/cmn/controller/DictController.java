@@ -25,7 +25,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/admin/cmn/dict")
-@CrossOrigin
 public class DictController {
 
     private final DictService dictService;
@@ -38,7 +37,7 @@ public class DictController {
     }
 
     @ApiOperation(value = "导出")
-    @GetMapping(value = "/exportData")
+    @GetMapping("exportData")
     public void exportData(HttpServletResponse response){
         dictService.exportData(response);
     }
@@ -49,4 +48,29 @@ public class DictController {
         dictService.importDictData(file);
         return Result.ok();
     }
+
+    @ApiOperation(value = "根据dictCode和value查询")
+    @GetMapping("getName/{dictCode}/{value}")
+    public String getName(@PathVariable("dictCode") String dictCode,
+                          @PathVariable("value") String value){
+        return dictService.getDictName(dictCode,value);
+    }
+
+    @ApiOperation(value = "根据value查询")
+    @GetMapping("getName/{value}")
+    public String getName(@PathVariable("value") String value){
+        return dictService.getDictName("",value);
+    }
+
+    @ApiOperation(value = "根据dictCode获取下级结点")
+    @GetMapping("findByDictCode/{dictCode}")
+    public Result<?> findByDictCode(@PathVariable("dictCode") String dictCode){
+        List<Dict> list = dictService.findByDictCode(dictCode);
+        return Result.ok(list);
+    }
+
+
+
+
+
 }

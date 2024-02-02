@@ -2,33 +2,52 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service-cmn" />
         <module name="common-util" />
-        <module name="service-user" />
+        <module name="service-gateway" />
+        <module name="service-cmn-client" />
+        <module name="service-order-client" />
+        <module name="service-user-client" />
+        <module name="service-task" />
         <module name="hoapital-manage" />
-        <module name="model" />
+        <module name="service-hosp-client" />
+        <module name="service-oss" />
         <module name="service-util" />
         <module name="service-hosp" />
+        <module name="service-order" />
+        <module name="service-cmn" />
+        <module name="service-msm" />
+        <module name="service-user" />
+        <module name="service-statistics" />
+        <module name="rabbit-util" />
+        <module name="model" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="common-utils" target="1.8" />
-      <module name="hospital-manage" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-util" options="-parameters" />
       <module name="hoapital-manage" options="-parameters" />
-      <module name="hospital-manage" options="-parameters" />
       <module name="model" options="-parameters" />
+      <module name="rabbit-util" options="-parameters" />
+      <module name="service-client" options="" />
       <module name="service-cmn" options="-parameters" />
+      <module name="service-cmn-client" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
       <module name="service-hosp" options="-parameters" />
+      <module name="service-hosp-client" options="-parameters" />
+      <module name="service-msm" options="-parameters" />
+      <module name="service-order" options="-parameters" />
+      <module name="service-order-client" options="-parameters" />
+      <module name="service-oss" options="-parameters" />
+      <module name="service-statistics" options="-parameters" />
+      <module name="service-task" options="-parameters" />
       <module name="service-user" options="-parameters" />
+      <module name="service-user-client" options="-parameters" />
       <module name="service-util" options="-parameters" />
     </option>
   </component>

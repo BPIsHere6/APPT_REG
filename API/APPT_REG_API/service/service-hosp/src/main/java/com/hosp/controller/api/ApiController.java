@@ -42,7 +42,6 @@ public class ApiController {
     private final HospitalService hospitalService;
     private final HospitalSetService hospitalSetService;
     private final DepartmentService departmentService;
-
     private final ScheduleService scheduleService;
 
     @ApiOperation(value = "上传医院")
