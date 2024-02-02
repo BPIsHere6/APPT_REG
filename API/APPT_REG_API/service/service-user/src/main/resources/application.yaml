@@ -50,9 +50,9 @@ mybatis-plus:
 wx:
   open:
     # 小程序微信公众平台appId
-    app_id: wxed9954c01bb89b47 # wxcc651fcbab275e33
+    app_id: xxxxxxxxxxxxxxxxx # wxcc651fcbab275e33
     # 小程序微信公众平台api秘钥
-    app_secret: a7482517235173ddb4083788de60b90e # 5f353399a2eae7ff6ceda383e924c5f6
+    app_secret: xxxxxxxxxxxxxxxxxxxxx # 5f353399a2eae7ff6ceda383e924c5f6
     # 回调地址
     redirect_url: http://localhost:8160/api/ucenter/wx/callback
 

@@ -44,8 +44,8 @@ spring:
 # 容联云短信服务
 rly:
   sms:
-    account_id: 2c94811c8b1e335b018c90a8e9065633
-    account_token: b2e7e443debe4121b04b2f135fa83856
-    app_id: 2c94811c8b1e335b018c90a8ea78563a
-    server_ip: app.cloopen.com
+    account_id: xxxxxxxxxxxxxxxxxxxxxxxxx
+    account_token: xxxxxxxxxxxxxxxxxxxxxxx
+    app_id: xxxxxxxxxxxxxxxxxxxx
+    server_ip: xxxxxxxxxxxxxxx
     server_port: 8883
